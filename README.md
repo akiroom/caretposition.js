@@ -12,12 +12,14 @@ Usage
 
 2. Call Measurement.caretPos() methods. argument is HTMLTextAreaElement,
 returns object has *left* and *top* property
+
 	var textArea = document.getElementById("textarea");
 	var caretPosition = Measurement.caretPos(textArea);
 	console.log(caretPosition.left);
 	console.log(caretPosition.top);
 
 If you use jQuery, you can write same code like this:
+
 	var textArea = $("#textarea");
 	var caretPosition = Measurement.caretPos(textArea);
 	console.log(caretPosition.left);
