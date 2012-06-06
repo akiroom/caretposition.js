@@ -1,9 +1,9 @@
 /*
 
-Measurement.caretposition.js
+caretposition.js
 
 Copyright (c) 2012- Hiroki Akiyama http://akiroom.com/
-Measurement.caretposition.js is free software distributed under the terms of the MIT license.
+caretposition.js is free software distributed under the terms of the MIT license.
 */
 
 Measurement = new function() {

@@ -1,14 +1,14 @@
-Measurement.caretposition.js
+caretposition.js
 ============================
 
 Description
 -----------
-Measurement.caretposition.js is useful to measure caret x-y position in textarea.
+caretposition.js is useful to measure caret x-y position in textarea.
 
 Usage
 -----
 1. Insert script tag into the head tag.
-	<script type="text/javascript" src="./measure.caretposition.js"></script>
+	<script type="text/javascript" src="./caretposition.js"></script>
 
 2. Call Measurement.caretPos() methods. argument is HTMLTextAreaElement,
 returns object has *left* and *top* property
@@ -33,7 +33,7 @@ See "sample.html" and "sample2.html".
 
 License
 -------
-Measurement.caretposition.js is free software distributed under the terms of the MIT license.
+caretposition.js is free software distributed under the terms of the MIT license.
 
 Copyright (c) 2012- Hiroki Akiyama http://akiroom.com/
 
