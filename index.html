@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Caretposition.js : Measurement.caretposition.js is useful to measure caret x-y position in textarea." />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Caretposition.js</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/akiroom/caretposition.js">View on GitHub</a>
+
+          <h1 id="project_title">Caretposition.js</h1>
+          <h2 id="project_tagline">Measurement.caretposition.js is useful to measure caret x-y position in textarea.</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/akiroom/caretposition.js/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/akiroom/caretposition.js/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>caretposition.js</h1>
+
+<h2>Description</h2>
+
+<p>caretposition.js is useful to measure caret x-y position in textarea.</p>
+
+<h2>Usage</h2>
+
+<ol>
+<li>
+<p>Insert script tag into the head tag.</p>
+
+</li>
+<li><p>Call Measurement.caretPos() methods. argument is HTMLTextAreaElement,
+returns object has <em>left</em> and <em>top</em> property</p></li>
+</ol><p>It's code like this:</p>
+
+<pre><code>var textArea = document.getElementById("textarea");
+var caretPosition = Measurement.caretPos(textArea);
+console.log(caretPosition.left);
+console.log(caretPosition.top);
+</code></pre>
+
+<p>If you use jQuery, you can write same code like this:</p>
+
+<pre><code>var textArea = $("#textarea");
+var caretPosition = Measurement.caretPos(textArea);
+console.log(caretPosition.left);
+console.log(caretPosition.top);
+</code></pre>
+
+<h2>Sample</h2>
+
+<p>See "sample.html" and "sample2.html".</p>
+
+<h2>License</h2>
+
+<p>caretposition.js is free software distributed under the terms of the MIT license.</p>
+
+<p>Copyright (c) 2012- Hiroki Akiyama <a href="http://akiroom.com/">http://akiroom.com/</a></p>
+
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p>
+
+<p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p>
+
+<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Caretposition.js maintained by <a href="https://github.com/akiroom">akiroom</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
