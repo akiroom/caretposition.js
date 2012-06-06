@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Measure Caret Position In Textarea</title></title>
+	<meta charset="UTF-8">
+	<script type="text/javascript" src="./caretposition.js"></script>
+	<style>
+	#textBox {
+		width: 320px;
+		height: 240px;
+	}
+	</style>
+</head>
+<body>
+	<textarea id="textBox" wrap="off"></textarea>
+	<div id="debug"></div>
+	
+	<script type="text/javascript">
+		setInterval(function () {
+			var textBox = document.getElementById("textBox");
+			var caretPosition = Measurement.caretPos(textBox);
+			
+			document.getElementById("debug").innerHTML = "x:" + caretPosition.left + ", " + "y:" + caretPosition.top;
+		}, 100);
+		
+	</script>
+</body>
+</html>

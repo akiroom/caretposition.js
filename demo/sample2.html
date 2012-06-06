@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Measure Caret Position In Textarea</title></title>
+	<meta charset="UTF-8">
+	<script type="text/javascript" src="./caretposition.js"></script>
+	<style>
+	#textBox {
+		width: 320px;
+		height: 240px;
+		font-size: 14px;
+	}
+	#suggestWindow {
+		position: absolute;
+		visibility: hidden;
+	}
+	</style>
+</head>
+<body onkeyup="onKeyUp(event)">
+	<p>push [Esc] key to show/hide Suggest (like) window.</p>
+	<textarea id="textBox" wrap="off" onclick="onClick(event)"></textarea>
+	<div id="debug"></div>
+	
+	<select id="suggestWindow" size="4">
+		<option>Suggest</option>
+		<option>Window</option>
+		<option>like</option>
+		<option>Sample</option>
+	</select>
+	
+	<script type="text/javascript">
+		function adjustSuggestWindow() {
+			var textBox = document.getElementById("textBox");
+			var caretPosition = Measurement.caretPos(textBox);
+			document.getElementById("debug").innerHTML = "x:" + caretPosition.left + ", " + "y:" + caretPosition.top;
+			
+			var suggestWindow = document.getElementById('suggestWindow');
+			suggestWindow.style.top = (caretPosition.top+14) + 'px';
+			suggestWindow.style.left = caretPosition.left + 'px';
+		}
+		
+		// Click in textarea.
+		function onClick(event) {
+			adjustSuggestWindow();
+		}
+		
+		// Pressed any key.
+		function onKeyUp(event) {
+			adjustSuggestWindow();
+			if (event.keyCode == 27) {
+				var suggestWindow = document.getElementById('suggestWindow');
+				suggestWindow.style.visibility = (suggestWindow.style.visibility == 'hidden')?'visible':'hidden';
+			}
+		}
+		
+		setInterval(function () {
+			adjustSuggestWindow();
+		}, 100);
+		
+	</script>
+</body>
+</html>
