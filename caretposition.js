@@ -16,16 +16,10 @@ Measurement = new function() {
 		}
 		// HTML Sanitizer
 		var escapeHTML = function (s) {
-			var MAP = {
-				'&': '&amp;',
-				'<': '&lt;',
-				'>': '&gt;',
-				'"': '&#34;',
-				"'": '&#39;'
-			};
-			var repl = function(c){return MAP[c];};
-			return s.replace(/[&<>'"]/g, repl);
-		};
+			var obj = document.createElement('pre');
+			obj[typeof obj.textContent != 'undefined'?'textContent':'innerText'] = s;
+			return obj.innerHTML;
+  		};
   		
 		// Get caret character position.
 		var getCaretPosition = function (element) {
