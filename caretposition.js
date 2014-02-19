@@ -118,6 +118,12 @@ Measurement = new function() {
 			dummyTextArea.style.maxWidth = textAreaStyle.width;
 			dummyTextArea.style.backgroundColor = textAreaStyle.backgroundColor;
 			dummyTextArea.style.fontFamily = textAreaStyle.fontFamily;
+			dummyTextArea.style.padding = textAreaStyle.padding;
+			dummyTextArea.style.paddingTop = textAreaStyle.paddingTop;
+			dummyTextArea.style.paddingRight = textAreaStyle.paddingRight;
+			dummyTextArea.style.paddingBottom = textAreaStyle.paddingBottom;
+			dummyTextArea.style.paddingLeft = textAreaStyle.paddingLeft;
+			
 			
 			targetElement.parentNode.appendChild(dummyTextArea);
 		}
